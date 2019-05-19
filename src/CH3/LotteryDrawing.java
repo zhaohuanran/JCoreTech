@@ -1,8 +1,11 @@
 package CH3;
 
-
 import java.util.Arrays;
-
+/**
+ *个人
+ * @version 1.20 2019-05-20
+ * @author Nauh
+ */
 public class LotteryDrawing {
     public static void main(String[] args) {
         int n=49;
