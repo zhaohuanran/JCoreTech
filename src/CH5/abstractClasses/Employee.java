@@ -1,6 +1,7 @@
 package CH5.abstractClasses;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Employee extends Person {
     private double salary;
@@ -27,5 +28,18 @@ public class Employee extends Person {
     public void rasieSalary(double byPercent) {
         double raise = salary * byPercent;
         salary += raise;
+    }
+
+    public boolean equals(Object otherObject) {
+        if (this == otherObject)
+            return true;
+        if (otherObject == null)
+            return false;
+        if (getClass() != otherObject.getClass())
+            return false;
+        Employee other = (Employee) otherObject;
+        return Objects.equals(name, other.name)
+                && salary == other.salary
+                && Objects.equals(hireDay, other.hireDay);
     }
 }

@@ -1,7 +1,7 @@
 package CH5.abstractClasses;
 
 public abstract class Person {
-    private String name;
+    public String name;
 
     public Person(String name) {
         this.name = name;
