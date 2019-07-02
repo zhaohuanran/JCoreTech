@@ -12,7 +12,7 @@ public class PersonTest {
         // file the people arrays with the Student and Employee objects.
         people[0] = new Student("Maryy", "CS");
         people[1] = new Employee("Harry", 40000, 2011, 3, 4);
-        people[2] = new Employee("Harry", 40000, 2011, 3, 4);
+        people[2] = new Employee("Sakura", 40000, 2011, 3, 4);
         // print out names and descriptions of all person objects.
         for (Person p : people
         ) {

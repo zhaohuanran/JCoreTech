@@ -29,11 +29,11 @@ public class ReflectionTest {
             Class cl = Class.forName(name);
             Class superClass = cl.getSuperclass();
             String modifiers = Modifier.toString(cl.getModifiers());
-            if (modifiers.length() > 0) System.out.println(modifiers = " ");
-            System.out.println("class " + name);
+            if (modifiers.length() > 0) System.out.print(modifiers = " ");
+            System.out.print("class " + name);
             if (superClass != null && superClass != Objects.class)
-                System.out.println("extends " + superClass.getName());
-            System.out.print("\n}\n");
+                System.out.print("extends " + superClass.getName());
+            System.out.print("\n{\n");
             printConstructors(cl);
             System.out.println();
             printMethods(cl);
@@ -58,14 +58,14 @@ public class ReflectionTest {
             String name = c.getName();
             System.out.print("    ");
             String modifiers = Modifier.toString(c.getModifiers());
-            if (modifiers.length() > 0) System.out.println(modifiers + " ");
-            System.out.println(name + "(");
+            if (modifiers.length() > 0) System.out.print(modifiers + " ");
+            System.out.print(name + "(");
 
             // print parameter types
             Class[] paramType = c.getParameterTypes();
             for (int j = 0; j < paramType.length; j++) {
                 if (j > 0) System.out.print(" , ");
-                System.out.println(paramType[j].getName());
+                System.out.print(paramType[j].getName());
             }
             System.out.println(");");
         }
@@ -77,17 +77,17 @@ public class ReflectionTest {
         ) {
             Class retType = m.getReturnType();
             String name = m.getName();
-            System.out.println("  ");
+            System.out.print("  ");
             // print modifiers,return type and method name
             String modifiers = Modifier.toString(m.getModifiers());
-            if (modifiers.length() > 0) System.out.println(modifiers + " ");
-            System.out.println(retType.getName() + " " + name + "(");
+            if (modifiers.length() > 0) System.out.print(modifiers + " ");
+            System.out.print(retType.getName() + " " + name + "(");
             // print parameter types
 
             Class[] paramType = m.getParameterTypes();
             for (int j = 0; j < paramType.length; j++) {
                 if (j > 0) System.out.print(" , ");
-                System.out.println(paramType[j].getName());
+                System.out.print(paramType[j].getName());
             }
             System.out.println(");");
         }
@@ -106,7 +106,7 @@ public class ReflectionTest {
             String name = f.getName();
             System.out.print("  ");
             String modifiers = Modifier.toString(f.getModifiers());
-            if (modifiers.length() > 0) System.out.println(modifiers + " ");
+            if (modifiers.length() > 0) System.out.print(modifiers + " ");
             System.out.println(type.getName() + " " + name + ";");
 
         }

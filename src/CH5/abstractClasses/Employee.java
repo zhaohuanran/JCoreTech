@@ -40,6 +40,6 @@ public class Employee extends Person {
         Employee other = (Employee) otherObject;
         return Objects.equals(name, other.name)
                 && salary == other.salary
-                && Objects.equals(hireDay, other.hireDay);
+                && hireDay.equals(other.hireDay);
     }
 }
